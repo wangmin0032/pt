@@ -5,13 +5,15 @@
     <script src="js/jquery.js"></script>
     <script src="js/respond.js"></script>
     <script src="js/pintuer.js"></script>
+   <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
     <link rel="stylesheet" href="css/pintuer.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>拼图框架测试</title>
 </head>
 <body>
-    <div class="layout bg-red bg-inverse">
+    <div class="layout bg-gray bg-inverse">
         <div class="container">
-            <div class="navbar bg-red bg-inverse radius">
+            <div class="navbar bg-gray bg-inverse radius">
                 <div class="navbar-head">
                     <button class="button bg icon-navicon" data-target="#navbar-bg1"></button>
                     <a href="#"><img src="images/logo.png" height="20" /></a>
@@ -53,65 +55,121 @@
 
     <div class="container">
         <div class="line margin-large-top">
-            <div class="x2 border-bottom border-middle border-blue padding-bottom">
-                <h1>php技术</h1>
+            <div class="x6">
+                <!--  同一效果多次调用，你只需要各自指定一个不重复的ID，然后根据需要设置参数即可 -->
+                <!-- 不同id=demo1  相同class="picBtnTop" -->
+                <div id="demo1" class="picBtnTop">
+                    <div class="hd">
+                        <ul>
+                            <li><img src="images/pic1.jpg" /></li>
+                            <li><img src="images/pic2.jpg" /></li>
+                            <li><img src="images/pic3.jpg" /></li>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="pic"><a href=""><img src="images/pic1.jpg" /></a></div>
+                                <div class="title"><a href="">效果图1</a></div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="pic"><a href=""><img src="images/pic2.jpg" /></a></div>
+                                <div class="title"><a href="">效果图2</a></div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="pic"><a href=""><img src="images/pic3.jpg" /></a></div>
+                                <div class="title"><a href="">效果图3</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    //唯一不同：jQuery("#demo1")
+                    jQuery("#demo1").slide({ mainCell:".bd ul",effect:"top",autoPlay:true,triggerTime:0 });
+                </script>
+
             </div>
 
-            <div class="x10 border-bottom border-middle border-red padding-bottom">
-                <h1 class="float-right"><small><a href="">阅读更多</a></small></h1>
-            </div>
 
-        </div>
-        <div class="line-big margin-large-top">
-            <div class="x6 border-gray border-right">
+            <div class="x6 border-bottom border-small border-blue">
+                <h1>php技术<small class="float-right"><a href="">阅读更多</a></small></h1>
+            </div>
+            <div class="x6">
                 <ul class="list-text padding-right">
                     <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
                     <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
                     <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
                     <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                </ul>
-            </div>
+                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
 
-            <div class="x6">
-                <ul class="list-text ">
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="line margin-large-top">
-            <div class="x2 border-bottom border-middle border-blue padding-bottom">
-                <h1>php技术</h1>
-            </div>
 
-            <div class="x10 border-bottom border-middle border-red padding-bottom">
-                <h1 class="float-right"><small><a href="">阅读更多</a></small></h1>
-            </div>
 
-        </div>
+
         <div class="line-big margin-top">
-            <div class="x6 border-gray border-right">
-                <ul class="list-text padding-right">
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                </ul>
+            <div class="x4">
+                <div class="x12 border-bottom border-small border-blue">
+                    <h1>php技术<small class="float-right"><a href="">阅读更多</a></small></h1>
+                </div>
+                <div class="x12 ">
+                    <ul class="list-text padding-right">
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="x6">
-                <ul class="list-text">
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                    <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
-                </ul>
+            <div class="x4">
+                <div class="x12 border-bottom border-small border-blue">
+                    <h1>php技术<small class="float-right"><a href="">阅读更多</a></small></h1>
+                </div>
+                <div class="x12">
+                    <ul class="list-text padding-right">
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="x4">
+                <div class="x12 border-bottom border-small border-blue">
+                    <h1>php技术<small class="float-right"><a href="">阅读更多</a></small></h1>
+                </div>
+                <div class="x12">
+                    <ul class="list-text padding-right">
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                        <li><span class="date">2015-4-8</span><a href="">拼图是一款开源的专业网页前端UI解决方案</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+
     </div>
 
 </body>
